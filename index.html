@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="assets/css/lightgallery.min.css" />
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body id="home">
@@ -420,7 +422,7 @@
         <div class="col-lg-6">
           <h3 class="st-contact-title">Just say Hello</h3>
           <div id="st-alert"></div>
-          <form action="#" method="POST" class="st-contact-form" id="contact-form">
+          <form action="" class="st-contact-form" id="submit-form">
             <div class="st-form-field">
               <input type="text" id="name" name="name" placeholder="Your Name" required>
             </div>
@@ -506,6 +508,26 @@
   <script src="assets/js/ripples.min.js"></script>
   <script src="assets/js/particles.min.js"></script>
   <script src="assets/js/main.js"></script>
+<script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbx900V5QEKI60gdaX01mL4OBo6ouSn5v0_4XL4bz748JqrlaSVFOjyYe1pMTC0zRzVbnA/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Submitted...")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+
 </body>
 
 
