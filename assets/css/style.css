@@ -852,6 +852,11 @@ hr {
     width:149px;
     height:40px;
   }
+  .st-site-header .st-style2 .st-main-header-left p{
+    font-size: 36px;
+    font-weight: 200;
+    color: #a9adb8;
+  }
   .st-site-header.st-style2 .st-btn.st-style1 {
     margin-top: 20px;
     font-size: 14px;
@@ -913,6 +918,10 @@ hr {
 8. Slider
 -
 ---------------------------------------------------------------*/
+.main-about{
+  align-items: center;
+  text-align: center;
+}
 .st-hero-wrap {
   position: relative;
   height: 850px;
